@@ -85,14 +85,15 @@ void (*pTests[])() = { test0, test1, test2, test3, test4, test5, test6, test7, t
 #include <cstdio>   //sscanf
 int main(int argc, char** argv)
 {
-    if ( argc > 1 ) {
-        int test = 0;
-        std::sscanf(argv[1],"%i",&test);
-        try {
-            pTests[test]();
-        } catch( const char* msg) {
-            std::cerr << msg << std::endl;
-        }
-    }
+    //if ( argc > 1 ) {
+    //    int test = 0;
+    //    std::sscanf(argv[1],"%i",&test);
+    //    try {
+    //        pTests[test]();
+    //    } catch( const char* msg) {
+    //        std::cerr << msg << std::endl;
+    //    }
+    //}
+  test0();
     return 0;
 }

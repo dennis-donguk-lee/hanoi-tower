@@ -115,6 +115,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="hanoi_tower-files\hanoi-tower.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="hanoi_tower-files\driver.cpp" />
+    <ClCompile Include="hanoi_tower-files\hanoi-tower.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

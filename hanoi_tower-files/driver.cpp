@@ -95,8 +95,8 @@ int main(int argc, char** argv)
     //    }
     //}
 
-  test0();
-  std::getchar();
+  test6();
+  //std::getchar();
 
     return 0;
 }

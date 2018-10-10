@@ -11,13 +11,13 @@ void hanoi_tower_1_rec(const int n, int diskTotal, char src, char dest, char aux
     std::stringstream ss;
 
     if ( n == 1 ) {
-      ss << "move disk " << diskTotal << " from " << src << " to " << dest;
+      ss << "move disk 1 from " << src << " to " << dest;
       cb( ss.str() ); // callback
     }
     else
     {
       hanoi_tower_1_rec(n - 1, diskTotal, src, aux, dest, cb);
-      ss << "move disk " << diskTotal - n + 1 << " from " << src << " to "
+      ss << "move disk " << n << " from " << src << " to "
       << dest;
       cb( ss.str() ); // callback
       hanoi_tower_1_rec(n - 1, diskTotal, aux, dest, src, cb);

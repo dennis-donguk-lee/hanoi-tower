@@ -4,16 +4,19 @@
 #include <iomanip>      // left,right,fill,setw - see handout
 
 template< typename CALLBACK >
-void hanoi_tower_1_rec(const int n, int diskTotal, char src, char dest, char aux
-  , CALLBACK cb
+void hanoi_tower_1_rec(const int n, int diskTotal, char src, char dest
+  , char aux , CALLBACK cb
 )
 {
     std::stringstream ss;
 
+    // todo: try tail recursion
+    // if it is the smallest disk, print
     if ( n == 1 ) {
       ss << "move disk 1 from " << src << " to " << dest;
       cb( ss.str() ); // callback
     }
+    // else, use two recursions, each decrementing corresponding disk number
     else
     {
       hanoi_tower_1_rec(n - 1, diskTotal, src, aux, dest, cb);
@@ -22,8 +25,6 @@ void hanoi_tower_1_rec(const int n, int diskTotal, char src, char dest, char aux
       cb( ss.str() ); // callback
       hanoi_tower_1_rec(n - 1, diskTotal, aux, dest, src, cb);
     }
-
-    return;
 }
 
 template< typename CALLBACK >

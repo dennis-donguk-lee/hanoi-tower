@@ -94,6 +94,9 @@ int main(int argc, char** argv)
     //        std::cerr << msg << std::endl;
     //    }
     //}
+
   test0();
+  std::getchar();
+
     return 0;
 }
